@@ -67,7 +67,7 @@ Func checkRegion($region, $checksum)
 EndFunc
 
 Func afkSleep()
-   Local $endAfk = 4580000 ; time in seconds to afk farm
+   Local $endAfk = 3; time in milliseconds to afk farm, 4580000 is the production value
    Local $timer = 0
 
    ConsoleWrite("Farming XP for: " & $endAfk & " seconds..." & @CRLF)
