@@ -1,5 +1,8 @@
 #include <Constants.au3>
 
+; Hotkey to terminate the script
+HotKeySet("{F8}", "Terminate")
+
 $doFarming = True
 While True
    $gameState = checkState()
@@ -123,4 +126,8 @@ Func handleExceptions()
    Send("{ESC}")
    SendKeepActive("")
    Sleep(3000)
+EndFunc
+
+Func Terminate()
+   Exit(0)
 EndFunc
