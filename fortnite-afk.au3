@@ -18,7 +18,9 @@ While True
 	  $doFarming = restartFarming()
    Case $gameState == "IN SERVER SELECTION"
 	  enterCreative()
-   Case $gameState == "IN ESCAPE MENU"
+   Case $gameState == "IN ESCAPE MENU" And $doFarming == True
+	  exitEscapeMenu()
+   Case $gameState == "IN ESCAPE MENU" And $doFarming == False
 	  leaveGame()
    Case $gameState == "IN LEAVE CREATIVE MENU"
 	  leaveCreative()
@@ -106,26 +108,31 @@ Func leaveCreative()
 EndFunc
 
 Func exitInventory()
-   SendKeepActive("Fortnite")
-   Send("{ESC}")
-   SendKeepActive("")
+   pressEsc()
    Sleep(3000)
 EndFunc
 
 Func openEscapeMenu()
    ConsoleWrite("Attempting to restart XP farm..." & @CRLF)
-   SendKeepActive("Fortnite")
-   Send("{ESC}")
-   SendKeepActive("")
+   pressEsc()
    Sleep(3000)
+EndFunc
+
+Func exitEscapeMenu()
+   pressEsc()
 EndFunc
 
 Func handleExceptions()
    Sleep(10000)
+   pressEsc()
+   Sleep(3000)
+EndFunc
+
+;;;;; Helper Functions ;;;;;
+Func pressEsc()
    SendKeepActive("Fortnite")
    Send("{ESC}")
    SendKeepActive("")
-   Sleep(3000)
 EndFunc
 
 Func Terminate()
