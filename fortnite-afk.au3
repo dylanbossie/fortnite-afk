@@ -67,7 +67,7 @@ Func checkRegion($region, $checksum)
 EndFunc
 
 Func afkSleep()
-   Local $endAfk = 4580000; time in milliseconds to afk farm, 4580000 is the production value
+   Local $endAfk = 4580; time in seconds to afk farm, 4580s is the max number of ticks/lobby
    Local $timer = 0
 
    ConsoleWrite("Farming XP for: " & $endAfk & " milliseconds..." & @CRLF)
@@ -86,7 +86,7 @@ Func restartFarming()
 EndFunc
 
 Func enterCreative()
-   MouseMove(774, 897)
+   MouseMove(672, 883)
    MouseClick($MOUSE_CLICK_LEFT)
    ConsoleWrite("Waiting to enter creative..." & @CRLF)
    Sleep(20000)
