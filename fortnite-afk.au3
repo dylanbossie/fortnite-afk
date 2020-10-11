@@ -72,7 +72,7 @@ Func afkSleep()
    Local $endAfk = 4580; time in seconds to afk farm, 4580s is the max number of ticks/lobby
    Local $timer = 0
 
-   ConsoleWrite("Farming XP for: " & $endAfk & " milliseconds..." & @CRLF)
+   ConsoleWrite("Farming XP for: " & $endAfk & " seconds" & @CRLF)
    While $timer < $endAfk
 	  $timer = $timer + 1
 	  ConsoleWrite($timer & @CRLF)
