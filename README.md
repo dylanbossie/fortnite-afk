@@ -1,4 +1,5 @@
 # fortnite-afk
+This was private while it was functional, but now is just here as a fun demo :)
 
 Tool to automate afk'ing in Fortnite solo Creative lobbies through the use of AutoIt3. Also includes a tool to get a pixel area checksum for updating regions if the checksums change for any reason.
 
